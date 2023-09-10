@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konkan Tour and Travels</title>
+    <!-- <link rel="shortcut icon" href="../img/logo (2).png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/logopng (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="../css/destination.css">
+<style>    body{
+    background-color: rgb(233, 233, 233);
+}
+.navbar {
+    width: 100%;
+    display: contents;
+    padding: 2%;
+}
+
+.nav_bar {
+    width: 100%;
+    /* background-color: rgb(10, 8, 54); */
+    background-color: rgb(210, 233, 248);
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    float: inline-end;
+    color: white;
+    background-color: rgb(10, 8, 54);
+}
+
+.float-end {
+    width: 100%;
+    display: inline;
+    float: inline-end;
+    justify-self: flex-end;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.contact h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+.lbbsbvdbk{
+    background-color: rgb(255, 255, 255);
+}</style>
+</head>
+
+<body>
+
+    <div class="contact">
+        <div class="float-end">
+            <h3>Toll free: 808670589</h3>
+        </div>
+    </div>
+    <div class="nav_bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">Konkan Space</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> -->
+                <a class="navbar-brand" href="../destination.html">
+                    <img src="../img/logopng.png" alt="" width="140" height="80" class="d-inline-block align-text-top">
+
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                </div>
+            </div>
+            <!-- <div class="line"></div> -->
+        </nav>
+    </div>
+    <section class="bsbdvkk">
+        <div class="container">
+            <div class="lbbsbvdbk">
+                <div class="vbbdsblb">
+                    <form action="" class="form-contact-book-table">
+                        <h2 class="text-center">Reserved your Table !</h2>
+                        <div class="row">
+                           
+                            <div class="col-sm-6 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="firstname1 vblsbdbk" placeholder="First Name...." required>
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="text" class="lastname1 vblsbdbk" placeholder="Last Name...." required>
+                                </center>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="mobile1 vblsbdbk" placeholder="Mobile No.." id="number"
+                                    required>
+                                <!-- <button class="verify">verify</button> -->
+                                <!-- </center> -->
+                                <small id="smallfor2"></small>
+                                <small id="smallfor">OTP is sent to your Mobile No.</small>
+                            </div>
+                            <div class="col-sm-2 md-6">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="mobile vblsbdbk" placeholder="Mobile No.." required> -->
+                                <!-- <button class="verify" onclick="phoneAuth()">Send OTP</button> -->
+                                <!-- <div class="captcha" id="recaptcha-container"></div> -->
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="email" class="emailid1 vblsbdbk" placeholder="Email ID ...."
+                                        id="verificationcode" required>
+                                </center>
+                                <br>
+
+                            </div>
+                            <!-- <div id="ksk"> -->
+                            <div class="col-sm-4 md-6" id="bjdsb">
+                                <!-- <center> -->
+                                <input type="text" class="mobile vblsbdbk" placeholder="Enter OTP" required>
+                                <!-- <button class="verify">verify</button> -->
+                                <small id="smallforv">OTP Verified</small>
+                                <br>
+                                <small id="smallforn">Incorrect OTP</small>
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-2 md-6" id="kskk">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="mobile vblsbdbk" placeholder="Mobile No.." required> -->
+                                <button class="verify2" onclick="codeverify()">Verify</button>
+                                <!-- </center> -->
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <h4 class="text-center fewh">Address Details</h4>
+                            </div>
+
+
+                            <div class="col-sm-4 md-6">
+                                <center>
+                                    <input type="text" class="maharashtra1 vblsbdbk" placeholder="State" required>
+                                </center>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="firstname vblsbdbk" placeholder="Last Name"> -->
+                                <!-- </center> -->
+                                <input list="browsers" class="vblsbdbk" name=" teml " id="browser" placeholder="City">
+
+                                <datalist id="browsers">
+                                    <option value="Khed">
+                                    <option value="Ratnagiri">
+                                    <option value="Snagmeshwar">
+                                    <option value="Sindhudurg">
+                                    <option value="Chipalun">
+                                    <option value="Dapoli">
+                                    <option value="Mandangad">
+                                </datalist>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <input type="number" class="firstname vblsbdbk" placeholder="Table Quantity">
+                                <!-- </center> -->
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+
+		<div class="box-container">
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a href="home.html"> <i class="fas fa-angle-right"></i> home</a>
+				<a href="about.html"> <i class="fas fa-angle-right"></i> about</a>
+				<a href="top destination"> <i class="fas fa-angle-right"></i> Top destination</a>
+				<a href="Services"> <i class="fas fa-angle-right"></i> services</a>
+			</div>
+
+			<div class="box">
+				<h3>extra links</h3>
+				<a href="#"> <i class="fas fa-angle-right"></i> feedback</a>
+				<a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+				<a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+				<a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+			</div>
+
+			<div class="box">
+				<h3>contact info</h3>
+				<a href="#"> <i class="fas fa-phone"></i>800-789-3054 </a>
+				<a href="#"> <i class="fas fa-phone"></i> 788-794-1533 </a>
+				<a href="#"> <i class="fas fa-envelope"></i> valapkar.ajay@rmcet.com </a>
+				<a href="#"> <i class="fas fa-map"></i> RMCET,Ambav Devrukh-415804 </a>
+			</div>
+
+			<div class="box">
+				<h3>follow us</h3>
+				<a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+				<a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+				<a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+			</div>
+
+		</div>
+
+		<div class="credit"> created by <span>Konkan Tours & Travel</span> | all rights reserved! </div>
+
+	</section>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+        // https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js
+        import { getAuth, createUserWithEmailAndPassword, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDub9XIDp3h2vjxhuyioITFg-YMDQO8R_s",
+            authDomain: "konkanferi.firebaseapp.com",
+            databaseURL: "https://konkanferi-default-rtdb.firebaseio.com",
+            projectId: "konkanferi",
+            storageBucket: "konkanferi.appspot.com",
+            messagingSenderId: "464491932386",
+            appId: "1:464491932386:web:0936af03f77e0f44c00cbb",
+            measurementId: "G-DB71KQCYML"
+        };
+//  <script src="js/index.js">
+    </script>
+    <script src="js/book.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konkan Tour and Travels</title>
+    <!-- <link rel="shortcut icon" href="../img/logo (2).png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/logopng (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media2.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="../css/media.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+    <script type="text/javascript" src="/root/utils/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.4/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <!-- <script src="html2pdf.bundle.min.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <!-- <script src="html2pdf.bundle.min.js"></script> -->
+    <style>
+        body{
+            background-color: rgb(233, 233, 233);
+        }
+        .navbar {
+            width: 100%;
+            display: contents;
+            padding: 2%;
+        }
+
+        .nav_bar {
+            width: 100%;
+            /* background-color: rgb(10, 8, 54); */
+            background-color: rgb(210, 233, 248);
+        }
+
+        .contact {
+            width: 100%;
+            display: flex;
+            float: inline-end;
+            color: white;
+            background-color: rgb(10, 8, 54);
+        }
+
+        .float-end {
+            width: 100%;
+            display: inline;
+            float: inline-end;
+            justify-self: flex-end;
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+
+        .contact h3 {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+        }
+        .lbbsbvdbk{
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contact">
+        <div class="float-end">
+            <h3>Toll free: 808670589</h3>
+        </div>
+    </div>
+    <div class="nav_bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">Konkan Space</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> -->
+                <a class="navbar-brand" href="../destination.html">
+                    <img src="../img/logopng.png" alt="" width="140" height="80" class="d-inline-block align-text-top">
+
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                </div>
+            </div>
+            <!-- <div class="line"></div> -->
+        </nav>
+    </div>
+    <section class="bsbdvkk">
+        <div class="container">
+            <div class="lbbsbvdbk">
+                <div class="vbbdsblb">
+                    <form action="" class="form-contact">
+                        <div class="row" id="invoice">
+                            <h1 class="book_tour text-center">Book Your Tour Now !!</h1>
+                            <div class="col-sm-12">
+                                <h4 class="text-center fewh">Personal Details</h4>
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="firstname vblsbdbk" placeholder="First Name...." required>
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="text" class="lastname vblsbdbk" placeholder="Last Name...." required>
+                                </center>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="mobile vblsbdbk" oninput="grenn()" id="maharashtra"
+                                    placeholder="Mobile No.." id="number" required>
+                                <!-- <button class="verify">verify</button> -->
+                                <!-- </center> -->
+                                <small id="smallfor2"></small>
+                                <small id="smallfor">OTP is sent to your Mobile No.</small>
+                            </div>
+                            <div class="col-sm-2 md-6">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="mobile vblsbdbk" placeholder="Mobile No.." > -->
+                                <button class="verify" onclick="phoneAuth();return false;">Send OTP</button>
+                                <div class="captcha" id="recaptcha-container"></div>
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="email" class="emailid vblsbdbk" placeholder="Email ID ...."
+                                        id="verificationcode" required>
+                                </center>
+                                <br>
+
+                            </div>
+                            <!-- <div id="ksk"> -->
+                            <div class="col-sm-4 md-6" id="bjdsb">
+                                <!-- <center> -->
+                                <input type="text" class="otpverifiy vblsbdbk" placeholder="Enter OTP" required>
+                                <!-- <button class="verify">verify</button> -->
+                                <small id="smallforv">Number Veirified</small>
+                                <br>
+                                <small id="smallforn">Incorrect OTP</small>
+                                <!-- </center> -->
+                            </div>
+                            <div class="col-sm-2 md-6" id="kskk">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="mobile vblsbdbk" placeholder="Mobile No.." > -->
+                                <button class="verify2" onclick="codeverify(); return false;">Verify</button>
+                                <!-- </center> -->
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <h4 class="text-center fewh">Address Details</h4>
+                            </div>
+
+                            <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="text" class="address vblsbdbk" placeholder=" Address Line 1" required>
+                                </center>
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="address vblsbdbk" placeholder="Address line 2" required>
+                                <!-- </center> -->
+                            </div>
+
+                            <div class="col-sm-4 md-6">
+                                <center>
+                                    <input type="text" class="maharashtra vblsbdbk" placeholder="State" required>
+                                </center>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <!-- <input type="text" class="firstname vblsbdbk" placeholder="Last Name"> -->
+                                <!-- </center> -->
+                                <input list="browsers" class="city vblsbdbk" name=" teml " id="browser"
+                                    placeholder="City">
+
+                                <datalist id="browsers">
+                                    <option value="Khed">
+                                    <option value="Ratnagiri">
+                                    <option value="Snagmeshwar">
+                                    <option value="Sindhudurg">
+                                    <option value="Chipalun">
+                                    <option value="Dapoli">
+                                    <option value="Mandangad">
+                                </datalist>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <!-- <center> -->
+                                <input type="text" class="pincode vblsbdbk" id="mahpin" oninput="pincodecolor()"
+                                    placeholder="Pin code">
+                                <!-- </center> -->
+                            </div>
+                            <!-- <div class="col-sm-6 md-6">
+                                <center>
+                                    <input type="text" class="firstname vblsbdbk" placeholder="Last Name">
+                                </center>
+                            </div> -->
+                            <div class="col-sm-12">
+                                <h4 class="text-center fewh">Other Details</h4>
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <big class="wehf">Vehicle Type</big><br>
+
+                                <select name="" id="seated" class=" vehicle seat vblsbdbk">
+                                    <!-- <option value="">2 seater</option> -->
+                                    <option value="4">4 seater</option>
+                                    <option value="5">5 seater</option>
+                                    <option value="12">12 seater</option>
+                                    <option value="18">18 seater</option>
+                                </select>
+
+                            </div>
+                            <div class="col-sm-4 md-6">
+                                <big class="wehf"></big><br>
+                                <select name="" id="" class="v_type vblsbdbk">
+                                    <option value="AC">AC</option>
+                                    <option value="Non-AC">Non-AC</option>
+
+                                </select>
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <big class="wehf">Depature Date (Approximate)</big><br>
+                                <input type="date" class="date_dept vblsbdbk" id="DATE" oninput="datespecify()"
+                                    placeholder="Last Name">
+                                <!-- <input type="t" class="firstname vblsbdbk" placeholder="Last Name"> -->
+                            </div>
+
+                            <div class="col-sm-6 md-6">
+                                <big class="wehf">No. of passanger :</big><br>
+                                <input type="number" class="pass vblsbdbk" oninput="passenger()" id="passw"
+                                    placeholder="No. of Passanger">
+                                <small id="passmore"></small>
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <big class="wehf">Departure City</big><br>
+                                <input list="browsers" name="teml" class="dept_city vblsbdbk" id="browser">
+
+                                <datalist id="browsers">
+                                    <option value="Khed">
+                                    <option value="Ratnagiri">
+                                    <option value="Sangmeshwar">
+                                    <option value="Sindhudurg">
+                                    <option value="Chipalun">
+                                    <option value="Dapoli">
+                                    <option value="Mandangad">
+                                </datalist>
+                            </div>
+                            <div class="col-sm-6 md-6">
+                                <big class="wehf">Tourism point</big><br>
+                                <input type="text" name=" teml " id="browser" class="t_point vblsbdbk" value="Mandavi"
+                                    placeholder="Mandavi" readonly>
+
+
+                            </div>
+
+                            <div class="col-sm-6 md-6">
+                                <div class="egii">
+                                    <big class="fgewg" onclick="checkprice()">
+                                        Check Rent
+                                    </big>
+                                    <span class="fberj"><big class="eew" id="pricefor"></big> Rs</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 md-6 nkdsgkk">
+                                <!-- <button class="ewuoiro" onclick="submitForm()">Submit</button> -->
+                                <input type="submit" value="Book Vehicle" class="submitforbook">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="zima">
+            <div class="hdskfk">
+                <div class="row">
+                    <div class="col-sm-6 djfkk" id="gfhj" >
+                        <!-- <h3 id="gfhj" class="sabfjk"></h3> -->
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj1" class="sabfjk"></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj2" class="sabfjk"></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj3" class="sabfjk"></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj4" class="sabfjk"></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj5" class="sabfjk"></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3 id="gfhj6" class="sabfjk"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button id="getPDF" onclick="genatePdf()">Download</button> -->
+
+    </section>
+
+    <section class="footer">
+        <div class="jkjask">
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="uefhsbk">
+            <h5 class="nknk">&copy; <a href="" class="jdvs">Konkan Tour & Travels 2022</a> All Rights Reserved</h5>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+        // https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js
+        import { getAuth, createUserWithEmailAndPassword, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDub9XIDp3h2vjxhuyioITFg-YMDQO8R_s",
+            authDomain: "konkanferi.firebaseapp.com",
+            databaseURL: "https://konkanferi-default-rtdb.firebaseio.com",
+            projectId: "konkanferi",
+            storageBucket: "konkanferi.appspot.com",
+            messagingSenderId: "464491932386",
+            appId: "1:464491932386:web:0936af03f77e0f44c00cbb",
+            measurementId: "G-DB71KQCYML"
+        };
+//  <script src="js/index.js">
+    </script>
+    <script src="../js/book.js"></script>
+    <!-- <script src="html2pdf.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</body>
+
+</html>

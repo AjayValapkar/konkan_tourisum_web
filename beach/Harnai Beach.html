@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konkan Tour and Travels</title>
+    <!-- <link rel="shortcut icon" href="../img/IMG_20230318_204848-removebg-preview.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/logopng (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="../css/destination.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+        .navbar {
+            width: 100%;
+            display: contents;
+            padding: 2%;
+        }
+
+        .nav_bar {
+            width: 100%;
+            /* background-color: rgb(10, 8, 54); */
+            background-color: rgb(210, 233, 248);
+        }
+
+        .contact {
+            width: 100%;
+            display: flex;
+            float: inline-end;
+            color: white;
+            background-color: rgb(10, 8, 54);
+        }
+
+        .float-end {
+            width: 100%;
+            display: inline;
+            float: inline-end;
+            justify-self: flex-end;
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+
+        .contact h3 {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact">
+        <div class="float-end">
+            <div class="dfkk">
+                <h3>Toll free: 02356-897689 | 02435-345687</h3>
+            </div>
+
+        </div>
+    </div>
+    <div class="nav_bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">Konkan Space</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> -->
+                <a class="navbar-brand" href="../destination.html">
+                    <img src="../img/logopng (3).png" alt="" width="140" height="80" class="d-inline-block align-text-top">
+
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                </div>
+            </div>
+            <!-- <div class="line"></div> -->
+        </nav>
+    </div>
+    <br>
+    <!-- <div class="bread"><a href="../destination.html">back </a></div> -->
+    <section class="tourism_place">
+        <div class="header">
+            <div class="ajsfk">
+                <div class="kdkfk">
+                    <h3>Harnai The Sunset Point of Ratnagiri</h3>
+                    <p>Highlights</p>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="row">
+
+
+                <div class="col-sm-6">
+                    <div class="slid_images">
+                        <img class="nature" src="../images/Harnai-1.jpg">
+                        <img class="nature" src="../images/Harnai-2.jpg">
+                        <img class="nature" src="../images/Harnai-3.jpg">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="static">
+                        <div class="row">
+                            <div class="column">
+                                <img src="../images/Harnai-4.jpg">
+                                <img src="../images/Harnai-5.jpg">
+
+
+                            </div>
+                            <div class="column">
+                                <img src="../images/Harnai-6.jpg">
+                                <img src="../images/Harnai-7.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigations">
+            <ul>
+                <li onclick="plan3()">TOUR</li>
+                <li onclick="plan4()">POLICIS</li>
+                <li onclick="plan5()">OFFERS</li>
+            </ul>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="left">
+                <div class="initial" id="mainpaln">
+                    <div class="slogen">
+                        <h4>" Everything is beautiful "</h4>
+                    </div>
+                    <div class="opriton">
+                        <ul>
+                            <li onclick="plan()">3D PLAN</li>
+                            <li onclick="plan1()">HOTELS</li>
+                            <li onclick="plan2()">INFORMATION</li>
+                        </ul>
+                    </div>
+                    <div class="planning" id="plan">
+                        <div class="palnyd">
+                            <div class="plan_day">
+                                <ul>
+                                    <li>
+                                        <small>From</small>
+                                        <p>Mumbai</p>
+                                    </li>
+                                    <li> <small>Date </small>
+                                        <p>12/04/2023</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="plan_day">
+                                <ul>
+
+                                    <li> <small style="text-decoration: wavy;">Rs. 22,000 /-</small>
+                                        <p>Rs. 16,000<small style="color:rgb(255, 242, 242);">/per person</small></p>
+                                    </li>
+                                    <li>
+                                        <button onclick="booke_pack('mandavi')">Book Now</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="days">
+                                    <div class="side_day">
+                                        <h5>Day Plan</h5>
+                                        <p onclick="day1()">Day 1</p>
+                                        <p onclick="day2()">Day 2</p>
+                                        <p onclick="day3()">Day 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9" id="day1">
+                                <div class="col">
+                                    <div class="row-sm-12">
+                                        <br>
+                                        <div class="day_no">Day 1 </div>
+                                        <h6 class="planinng">Mumbai - Harnai</h6>
+
+                                        <div class="row">
+
+                                            <div class="col-sm-6">
+
+
+                                                <img src="../img/car.png" alt="" class="car">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="change"><button>Change</button></div><br>
+
+
+                                                <h5>Private Transfer</h5>
+                                                <small>Swift, petrol</small><br>
+                                                <small>facilities</small>
+                                                <p>4 Seater | laguage | AC | firstAid </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-sm-12">
+                                        <!-- <div class="change"><button>Change</button></div> -->
+                                        <div class="row">
+
+                                            <div id="main_hotel">
+                                                <br>
+                                                <div class="change"><button id="myBtn">Change</button></div><br>
+                                                <div class="row hotelss" id="hotel_0">
+                                                    <div class="col-sm-6">
+
+                                                        <img src="../img/see_fans.jpg" alt="" class="car">
+
+
+                                                    </div>
+                                                    <div class="col-sm-6">
+
+
+                                                        <div class="hote_l">Hotel</div><br>
+                                                        <h5><a
+                                                                href="https://hotel-sea-fans.business.site/?utm_source=gmb&utm_medium=referral">Hotel
+                                                                Sea Fans</a></h5>
+                                                        <i class="fa fa-map-marker"
+                                                            style="font-size:20px; margin-right: 2%;"></i>
+                                                        <small style="color:black ; font-weight:600;">0.1 km from
+                                                            Mandavi
+                                                            Beach</small><br>
+                                                        <small>Mandvi Beach, Near Gate Way Of Ratnagiri Of, Ratnagiri,
+                                                            Maharashtra 415612</small>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="myModal" class="modal">
+                                                <div class="modal-content">
+                                                    <div class="close"><span class="close">&times;</span></div>
+                                                    <h5>Available Hotel for this plan only</h5>
+                                                    <div class="djsak">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="row hotelss" id="hotel_1">
+                                                                    <div class="col-sm-6">
+                                                                        <img src="images/kohinoor.jpg" alt=""
+                                                                            class="slide slide-hidden">
+                                                                        <!-- <img src="../img/s1.jpg" alt="" class="slide slide-hidden">
+                                                                                <img src="../img/s2.jpg" alt="" class="slide slide-hidden">
+                                                                                <img src="../img/s3.jpg" alt="" class="slide slide-hidden"> -->
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <!-- <div class="change"><button id="myBtn1">Change</button></div><br> -->
+                                                                        <div class="hote_l">Hotel</div><br>
+                                                                        <h5><a
+                                                                                href="https://www.kohinoorhotels.com/kohinoor-samudra-ratnagiri/">Kohinoor
+                                                                                Samudra Beach Resort</a></h5>
+                                                                        <i class="fa fa-map-marker"
+                                                                            style="font-size:20px; margin-right: 2%;"></i>
+                                                                        <small
+                                                                            style="color:black ; font-weight:600;">3.1
+                                                                            km km from Mandavi Beach</small><br>
+                                                                        <small>Pawas coastal Highway | Bhatye,
+                                                                            Ratnagiri, Ratnagiri 415612, India
+                                                                        </small><br>
+                                                                        <small style="font: 10px;">Breakfast | Free
+                                                                            parking | Room
+                                                                            Service</small>
+                                                                        <!-- <div class="nook">
+                                                                            <button
+                                                                                onclick="choose_hotel()">Select</button>
+                                                                        </div> -->
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row hotelss" id="hotel_2">
+                                                                    <div class="col-sm-6">
+                                                                        <img src="images/blue_ocean.jpg" alt=""
+                                                                            class="slide slide-hidden">
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <!-- <div class="change"><button id="myBtn">Change</button></div><br> -->
+                                                                        <div class="hote_l">Resort</div><br>
+                                                                        <h5><a href="https://blueoceanresort.in/">Blue
+                                                                                Ocean Resort and Spa</a>
+                                                                        </h5>
+                                                                        <i class="fa fa-map-marker"
+                                                                            style="font-size:20px; margin-right: 2%;"></i>
+                                                                        <small
+                                                                            style="color:black ; font-weight:600;">2.9
+                                                                            km from Mandavi Beach</small><br>
+                                                                        <small>S Malgund No 127, Malgund,
+                                                                            Ganpatipule 415615, India</small><br>
+                                                                        <small>Free parking | Kids club | Beach
+                                                                            access</small>
+                                                                        <!-- <div class="nook">
+                                                                            <button
+                                                                                onclick="choose_hotel()">Select</button>
+                                                                        </div> -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row hotelss " id="hotel_3">
+                                                                    <div class="col-sm-6">
+                                                                        <img src="images/nakshatra.jpg" alt=""
+                                                                            class="car">
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <!-- <div class="change"><button id="myBtn">Change</button></div><br> -->
+                                                                        <div class="hote_l">Resort</div><br>
+                                                                        <h5> <a
+                                                                                href="http://www.nakshatrabeachresort.in/">Nakshatra
+                                                                                Beach Resort</a></h5>
+                                                                        <i class="fa fa-map-marker"
+                                                                            style="font-size:20px; margin-right: 2%;"></i>
+                                                                        <small
+                                                                            style="color:black ; font-weight:600;">14.6
+                                                                            km from Mandavi Beach</small><br>
+                                                                        <small>Aarey Warey Coastel Highway Road,
+                                                                            Ganpatipule 415615, India</small><br>
+                                                                        <small>parking | Pool with view | Beach
+                                                                            access</small>
+
+                                                                        <!-- <div class="nook">
+                                                                            <button
+                                                                                onclick="choose_hotel()">Select</button>
+                                                                        </div> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="facilit">
+                                                    <h4>Delux Room</h4>
+                                                    <p><small>Meal plan :</small> Lunch and Dinner</p>
+                                                    <big style="font-weight:550;">Room Inclusion:</big><br>
+                                                    <small>complimentary breakfast available</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-9" id="day2">
+                                <div class="col">
+
+                                    <div class="row-sm-12">
+                                        <!-- <div class="change"><button>Change</button></div> -->
+                                        <div class="row">
+
+                                            <div class="col-sm-6">
+
+                                                <img src="../img/see_fans.jpg" alt="" class="car">
+
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="change"><button id="myBtn">Change</button></div><br>
+                                                <div id="myModal" class="modal">
+                                                    <div class="modal-content">
+                                                        <div class="close"><span class="close">&times;</span></div>
+                                                        <h5>Available Hotel for this plan only</h5>
+                                                        <div class="djsak">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="row hotelss">
+                                                                        <div class="col-sm-6" onmouseover="slideone()">
+                                                                            <img src="../img/beach_home.jpg" alt=""
+                                                                                class="slide slide-hidden">
+                                                                            <!-- <img src="../img/s1.jpg" alt="" class="slide slide-hidden">
+                                                                                    <img src="../img/s2.jpg" alt="" class="slide slide-hidden">
+                                                                                    <img src="../img/s3.jpg" alt="" class="slide slide-hidden"> -->
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="hote_l">House</div><br>
+                                                                            <h5>Samarth Atc-Beach Home Stay</h5>
+                                                                            <small>Near kalbadevi Beach ,Ganpatipule
+                                                                                Road, Kalbadevi, Maharashtra
+                                                                            </small><br>
+                                                                            <small style="font: 10px;">Breakfast | Free
+                                                                                parking | Room
+                                                                                Service</small>
+                                                                            <div class="nook">
+                                                                                <button
+                                                                                    onclick="location.replace('../other/book_table.html')">Book
+                                                                                    Now</button>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row hotelss">
+                                                                        <div class="col-sm-6" onmouseover="slideone()">
+                                                                            <img src="../img/kohinur.jpg" alt=""
+                                                                                class="slide slide-hidden">
+                                                                            <!-- <img src="../img/beach_home.jpg" alt="" class="slide slide-hidden">
+                                                                                    <img src="../img/kohinur.jpg" alt="" class="slide slide-hidden"> -->
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="hote_l">Resort</div><br>
+                                                                            <h5>Kohinoor Samudra Beach Resort, Ratnagiri
+                                                                            </h5>
+                                                                            <small>Pawas, Coastal Hwy, Bhatye,
+                                                                                Maharashtra 415639</small><br>
+                                                                            <small>Free parking | outdoor pool | Beach
+                                                                                access</small>
+                                                                            <div class="nook">
+                                                                                <button
+                                                                                    onclick="location.replace('../other/book_table.html')">Book
+                                                                                    Now</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row hotelss">
+                                                                        <div class="col-sm-6">
+                                                                            <img src="../img/anand.jpg" alt=""
+                                                                                class="car">
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="hote_l">Hotel</div><br>
+                                                                            <h5>Hotel Anand</h5>
+                                                                            <small>Bhatye Sada-Pawas, Road, Ratnagiri,
+                                                                                Maharashtra
+                                                                                415612</small><br>
+                                                                            <small>parking | pool | Beach access</small>
+
+                                                                            <div class="nook">
+                                                                                <button
+                                                                                    onclick="location.replace('../other/book_table.html')">Book
+                                                                                    Now</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="hote_l">Hotel</div><br>
+                                                <h5><a href="">Hotel Sea Fans</a></h5>
+                                                <small>3 Star hotel</small><br>
+                                                <small>Mandvi Beach, Near Gate Way Of Ratnagiri Of, Ratnagiri,
+                                                    Maharashtra 415612</small>
+
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="facilit">
+                                                    <h4>Delux Room</h4>
+                                                    <p><small>Meal plan :</small> Lunch and Dinner</p>
+                                                    <big style="font-weight:550;">Room Inclusion:</big><br>
+                                                    <small>complimentary breakfast available</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="policis" id="plocy">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="days">
+                                    <div class="side_day">
+                                        <!-- <h5>Day Plan</h5> -->
+                                        <p>Logging</p>
+                                        <p>Restaurant</p>
+                                        <p>Hotels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="col">
+                                    <div class="row-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-6" onmouseover="slideone()">
+                                                <img src="../img/beach_home.jpg" alt="" class="slide slide-hidden">
+                                                <!-- <img src="../img/s1.jpg" alt="" class="slide slide-hidden">
+                                                <img src="../img/s2.jpg" alt="" class="slide slide-hidden">
+                                                <img src="../img/s3.jpg" alt="" class="slide slide-hidden"> -->
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="hote_l">House</div><br>
+                                                <h5>Samarth Atc-Beach Home Stay</h5>
+                                                <small>Near kalbadevi Beach ,Ganpatipule Road, Kalbadevi, Maharashtra
+                                                </small><br>
+                                                <small style="font: 10px;">Breakfast | Free parking | Room
+                                                    Service</small>
+                                                <div class="nook">
+                                                    <button onclick="location.replace('../other/book_table.html')">Book
+                                                        Now</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-6" onmouseover="slideone()">
+                                                <img src="../img/kohinur.jpg" alt="" class="slide slide-hidden">
+                                                <!-- <img src="../img/beach_home.jpg" alt="" class="slide slide-hidden">
+                                                <img src="../img/kohinur.jpg" alt="" class="slide slide-hidden"> -->
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="hote_l">Resort</div><br>
+                                                <h5>Kohinoor Samudra Beach Resort, Ratnagiri</h5>
+                                                <small>Pawas, Coastal Hwy, Bhatye, Maharashtra 415639</small><br>
+                                                <small>Free parking | outdoor pool | Beach access</small>
+                                                <div class="nook">
+                                                    <button onclick="location.replace('../other/book_table.html')">Book
+                                                        Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <img src="../img/anand.jpg" alt="" class="car">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="hote_l">Hotel</div><br>
+                                                <h5>Hotel Anand</h5>
+                                                <small>Bhatye Sada-Pawas, Road, Ratnagiri, Maharashtra
+                                                    415612</small><br>
+                                                <small>parking | pool | Beach access</small>
+
+                                                <div class="nook">
+                                                    <button onclick="location.replace('../other/book_table.html')">Book
+                                                        Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary" id="transf">
+                        <h5>Harnai Beach Ratnagiri</h5>
+                        <p> At a distance of 2 km from Ratnagiri Bus Stand, Harnai Beach is located in the vicinity of
+                            Ratnagiri Town of Maharashtra. This is one of the most crowded beaches in Ratnagiri region.
+                            <br>
+
+                            Harnai Beach is blessed with beautiful seashore, which extends right up to Rajiwanda Port.
+                            This fabulous beach is surrounded by Ratnadurg Fort in the west and the majestic Arabian Sea
+                            to the south. The beach is known for its black sand and hence, the beach is often referred
+                            to as Black Sea. This beach is also known as Gateway to Ratnagiri, owing to the presence of
+                            the bastion situated at the head of the bay. <br>
+
+                            Harnai Beach is one of the busiest beaches in Maharashtra, as it is popular among water
+                            sports enthusiasts. Harnai Beach although appears a little unattractive because of the
+                            black sand, compared to other beaches, yet it is the most sought after picnic spot in
+                            Ratnagiri. <br>
+
+                            Harnai also has the Ratnagiri Jetty along with Gateway of Ratnagiri, which is a place for
+                            evening hang out. The Gateway of Ratnagiri is a preposterous structure with a slopped roof.
+                            The popular belief is that this structure is the work of the Pratinidhi Dhondu Bhaskar. It
+                            is a fabulous construction overlooking the majestic Arabian Sea and provides a unique
+                            opportunity to walk through the seashore and enjoy the cool breeze that gently flows from
+                            the sea.
+                        </p>
+                    </div>
+
+
+
+                </div>
+                <div class="plociess" id="mainpaln1">
+                    <div class="main">
+                        <div class="instr">
+                            <h4>Cancellation</h4>
+                            <small>How much will it cost to cancel or change the start date after making a booking?
+                            </small><br>
+                            <div class="row">
+                                <div class=" kjdkk col-sm-2">
+                                    <small>Within 2Days </small><br><br>
+                                    <p style="font-size: 16px;">Rs. 299 /- Charges</p>
+                                    <p>per person</p>
+                                </div>
+                                <div class=" kjdkk col-sm-2">
+                                    <small style="color:rgb(10, 146, 0);">After 2Days </small><br><br>
+                                    <p style="color:red;">No Cancellation</p>
+
+                                </div>
+
+                            </div>
+                            <big>
+                                Terms & Condition
+                            </big>
+                            <p>1. These are non-refundable amounts as per the current
+                                components attached. In the case of component change/modifications, the policy will
+                                change accordingly.
+                                <br>
+                                2. Please check the exact cancellation and date
+                                change policy on the review page before proceeding further.
+                                <br>
+                                3. Standard check-in time at the hotel is normally 2:00 pm and check-out is 11:00 am.
+                                An early check-in, or a late check-out is solely based on the discretion of the hotel.
+                                <br>
+                                4. A maximum of 3 adults are allowed in one room. The third occupant shall be provided a
+                                mattress/rollaway bed.
+                                <br>
+                                5. he itinerary is fixed and cannot be modified. Transportation shall be provided as per
+                                the itinerary and will not be at disposal.For any paid activity which is non-operational
+                                due to any unforeseen reason, we will process refund & same should reach the guest
+                                within 30 days of processing the refund.
+                                <br>
+
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="offers" id="mainpaln2">
+                    <div class="main">
+                        <div class="instr">
+                            <h4>Oops ! Currently there is no such Special Offers</h4>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div class="col">
+                    <div class="row-sm-12">
+                        <h5>From your place </h5>
+                        <small class="local">Check </small><br><br>
+                        <div class="boo_veh">
+                            <button onclick="location.replace('../other/book_vehicle.html')">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row-sm-12">
+                        <div class="map_view">
+                            <a
+                                href="https://www.google.com/maps/place/Harnai+Beach/@16.9913241,73.2814688,15z/data=!4m6!3m5!1s0x3bea0d60d8fca7c5:0xe73dc1b0329165a3!8m2!3d16.9913241!4d73.2814688!16s%2Fg%2F11hb2yyqty"><img
+                                    src="../img/mandvi_map.png" alt=""></a>
+                            <p><span>Address :</span> X7RJ+GHH, Sadanand Wadi, Ratnagiri, Maharashtra 415612</p>
+                            <p><span>Hours :</span> Open 24x7</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+
+    </section>
+    <section class="footer">
+
+		<div class="box-container">
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a href="Dashboard.html"> <i class="fas fa-angle-right"></i> home</a>
+				<a href="other/about.html"> <i class="fas fa-angle-right"></i> about</a>
+				<a href="top destination"> <i class="fas fa-angle-right"></i> Top destination</a>
+				<!-- <a href="Services"> <i class="fas fa-angle-right"></i> services</a> -->
+			</div>
+
+			<div class="box">
+				<h3>extra links</h3>
+				<a href="other/feedback.html"> <i class="fas fa-angle-right"></i> feedback</a>
+				<!-- <a href="#"> <i class="fas fa-angle-right"></i> about us</a> -->
+				<a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+				<a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+			</div>
+
+			<div class="box">
+				<h3>contact info</h3>
+				<a href="tel:8087658020"> <i class="fas fa-phone"></i>8087658020 </a>
+				<a href="tel:8149963440"> <i class="fas fa-phone"></i> 8149963440 </a>
+				<a href="mailto:valapkar.ajay@rmcet.com"> <i class="fas fa-envelope"></i> valapkar.ajay@rmcet.com </a>
+				<!-- <a href=""> <i class="fas fa-map"></i> RMCET,Ambav Devrukh-415804 </a> -->
+			</div>
+
+			<div class="box">
+				<h3>follow us</h3>
+				<a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+				<a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+				<a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+			</div>
+
+		</div>
+
+		<div class="credit"> created by <span>Konkan Tours & Travel</span> | all rights reserved! </div>
+
+	</section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+<script src="../js/destination.js"></script>
+
+</html>

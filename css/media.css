@@ -1,0 +1,361 @@
+@media (max-width:920px) {
+    .comment_for {
+        width: 95%;
+        padding-right: 15%;
+
+    }
+
+    .submitforcom {
+        margin-left: -15%;
+    }
+
+    .bksk {
+        width: 30%;
+        height: 30%;
+    }
+
+    .huhhf {
+        /* position: relative; */
+        width: 70%;
+    }
+
+    .fjjhj {
+        width: 95%;
+        padding: 2%;
+    }
+
+    .line {
+        display: block;
+    }
+
+    .icon21 {
+        position: absolute;
+        margin-left: -9.5%;
+        margin-right: 10%;
+        margin-top: 0.5%;
+        font-size: 20px;
+        background-color: transparent;
+        /* border: solid  white 1px ; */
+        border-radius: 25px;
+        padding: 1%;
+    }
+
+    .vbsbdbk {
+        position: absolute;
+        margin-top: -45%;
+        /* margin-left: ; */
+        /* margin: 0 auto; */
+        margin-left: 4%;
+        display: none;
+        font-size: 2.5rem;
+        opacity: 1;
+        /* margin-left: -30%; */
+        /* background-color: transparent; */
+        text-align: center;
+    }
+
+    .header {
+        top: 0;
+        position: fixed;
+    }
+
+    .vbkbxk {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .efjjk {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .teml {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .distance {
+        background-color: rgb(213, 233, 250);
+        border: none;
+        padding: 8px;
+        box-shadow: 1px 1xp 2px black;
+    }
+
+    .show {
+        padding: 10px;
+        padding-left: 5%;
+    }
+
+    .restaurant {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .md-4 {
+        padding-top: 6%;
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    .nkfdk {
+        margin-bottom: 6%;
+
+    }
+
+    .wehkk {
+        text-align: justify;
+    }
+
+    .near {
+        font-size: 1.7rem;
+    }
+
+    .beuridsbi {
+        width: 50%;
+        padding-bottom: 5%;
+    }
+
+    .yrt {
+        width: 80%;
+        font-size: 16px;
+        font-weight: 550;
+        /* margin: 0 auto; */
+    }
+
+    .restimg {
+        /* padding: 0%; */
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .col-sm-4 {
+        padding: 0%;
+    }
+
+    .services {
+        width: 100%;
+        background-color: rgb(236, 236, 236);
+        padding-top: 1%;
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .row-sm-12 {
+        width: 100%;
+        padding: 3%;
+        box-shadow: 0px 0px 1px 1px rgb(221, 221, 221);
+        margin-bottom: 4%;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .day_no {
+        position: relative;
+        float: inline-start;
+        padding: 1%;
+        width: 25%;
+        text-align: center;
+        background-color: rgb(255, 68, 40);
+        color: white;
+        margin-right: 2%;
+        border-radius: 15px;
+    }
+
+    .plan_day ul {
+        width: 100%;
+        padding: 3%;
+        width: 100%;
+    }
+
+    .plan_day ul li {
+        padding: 2%;
+        width: 50%;
+    }
+
+    .modal {
+        padding-top: 15%;
+    }
+
+    .modal-content {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .kdkfk {
+        position: relative;
+    }
+
+    .header {
+        /* top: 0; */
+        position: relative;
+    }
+
+    .middle .col-sm-6 .slid_images,
+    .middle .col-sm-6 .static {
+        height: 25.0vh;
+        overflow: hidden;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+        width: 100px;
+    }
+    .heading{
+        width: 100%;
+        /* padding: 0%; */
+        padding-bottom: 7%;
+        margin-bottom: 4%;
+    }
+    .searchdesti {
+        width: 100%;
+        padding: 2%;
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+    }
+    .searchdesti input{
+        font-size: 14px;
+
+    }
+
+    .beaches {
+        /* padding-top: 2%; */
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .slide-container {
+        /* padding: 0; */
+        padding-top: 0%;
+    }
+
+    .redbutton {
+        display: flexbox;
+        width: 95%;
+    }
+
+    .allbutton {
+        width: 50%;
+    }
+
+    .side_day {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side_day p {
+        margin: 1%;
+    }
+
+    .plan_day {
+        border-bottom: none;
+        padding: 0%;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .plan_day ul li {
+        width: 50%;
+        /* margin: 2%; */
+        /* margin-bottom: 0%; */
+    }
+
+    .palnyd {
+        width: 100%;
+        border-bottom: solid 1px grey;
+    }
+
+    .opriton {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigations {
+        margin-top: 10%;
+        padding-top: 10%;
+    }
+
+    .opriton ul {
+        padding-left: 0%;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .opriton ul li {
+
+        margin: 2%;
+    }
+    .line_bar span{
+        /* padding: 0%; */
+        padding-left: 15%;
+    }
+    .redbutton{
+
+    }
+    .redbutton button{
+        width: 30%;
+        font-size: 14px;
+
+    }
+    .allbutton{
+        width: 30%;
+
+    }
+    .book_planfor{
+        width: 95%;
+    }
+    .book_plan{
+        width: 95%;
+    }
+  .book_plan .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .plan_day ul{
+    width: 100%;
+  }
+  .plan_day ul li{
+    width: 30%;
+
+  }
+
+
+}
+@media (max-width:450px) {
+    .opriton ul li{
+        width: 40%;
+
+        font-size: 12px;
+
+    }
+}
+
+.btn {
+    /* text-align: end; */
+    /* margin: 1%; */
+    display: flex;
+    flex-direction: row;
+    float: inline-end;
+    align-items: flex-end;
+}

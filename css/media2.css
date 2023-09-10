@@ -1,0 +1,42 @@
+@media (max-width:920px) {
+  .carousel-caption a{
+    width: 90%;
+    font-size: 17px;
+    font-weight: 650;
+    text-align: center;
+    /* padding: 0; */
+    padding: 3%;
+    margin:  0 auto;
+  }
+  .carousel-inner{
+    height: 70vh;
+  }
+  .carousel-caption h1{
+    font-size: 35px;
+  }
+  .redbtn{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .fgewg{
+    text-align: center;
+    width: 70%;
+    margin-bottom: 10%;
+  }
+  .submitforbook{
+    width: 60%;
+  }
+  .carousel-item{
+    height: 85vh;
+}
+.carousel-inner{
+  height: 65vh;
+  padding-bottom: 10%;
+}
+.carousel-inner img{
+  height: 100%;
+}
+
+
+ 
+}

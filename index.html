@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Konkan Tour & Travels</title>
+	<link rel="shortcut icon" href="img/logopng (3).png" type="image/x-icon">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs		/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link href="css/style1.css" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media2.css">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="img/logopng (3).png" alt="" width="150" height="90" class="d-inline-block align-text-top">
+			</a>
+			<!-- </div> -->
+			<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+				class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+				type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="destination.html"> Destination</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="other/about.html">About us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="other/feedback.html">Contact us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html" data-bs-target="loginpop">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="line"></div> -->
+	</nav>
+	<div class="login-popup" id="loginpop">
+		<div class="box">
+
+			<div class="form">
+				<div class="close">&times;</div>
+				<div class="login">
+					<!-- <form action="" class="signupformain"> -->
+					<div class="row" id="signup">
+						<div class="ramtax">
+							<!-- <h3 class="text-center sign-up">Sign Up</h3> -->
+							<div class="method"> <button class="sign" id="signup"
+									onclick="signup() ;return false;">Sign-up</button>
+								<button class="sign" id="signin3" onclick=" signin() ;return false;">Sign
+									In</button>
+							</div>
+							<!-- <br> -->
+							<!-- <br> -->
+							<!-- <button id="signuptosignin">Sign IN</button> -->
+							<div class="tyie1" id="rueo">
+								<div class="nknko" id="eotiw">
+									<div class="col-sm-12 loginwith">
+										<i class="fa fa-envelope signupicon" style="font-size:25px; "></i>
+										<input type="email" class="email-id1 emailid " id="user_email"
+											placeholder="Email ID">
+									</div>
+									<div class="col-sm-12 loginwith">
+										<i class="fa fa-lock signupicon" style="font-size:25px; "></i>
+										<input type="password" class="confirm-password emailid" placeholder=" Password"
+											id="user_password12">
+									</div>
+									<div class="col-sm-12 loginwith">
+										<i class="fa fa-lock signupicon" style="font-size:25px; "></i>
+										<input type="password" class="confirm-password1 emailid" placeholder=" Password"
+											id="user_password">
+									</div>
+								</div>
+								<div class="col-sm-12 loginwithgoogle">
+									<button class=" nkgnkjnk" onclick="signUpfor()">Sign
+										Up
+									</button>
+									<!-- <input type="submit" value="Submit"> -->
+								</div>
+
+								<div class="col-sm-12 loginwithgoogle">
+									<button class=" nkgnkjnk1" onclick="ggolesignup()">Sign Up with
+										Google
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- </form> -->
+						<br>
+						<br>
+						<br>
+					</div>
+					<div class="row" id="signin">
+						<!-- <form action="" class="signiformain"> -->
+						<div class="ramtax">
+
+							<div class="tyie" id="rueo1">
+								<div class="method"> <button class="sign" id="signup"
+										onclick="signup()">Sign-up</button>
+									<button class="sign" id="signin3" onclick="signin()">Sign
+										In</button>
+								</div>
+								<div class="nknko" id="eotiw">
+									<div class="col-sm-12 loginwith">
+										<i class="fa fa-envelope signupicon" style="font-size:25px; "></i>
+										<input type="email" class="email-id1 emailid " id="user_email1"
+											placeholder="Email ID" required>
+									</div>
+									<div class="col-sm-12 loginwith">
+										<i class="fa fa-lock signupicon" style="font-size:25px; "></i>
+										<input type="password" class="confirm-password1 emailid" placeholder=" Password"
+											id="user_password1">
+									</div>
+									<div class="col-sm-12 ">
+										<samll class="anfkk"><button class="reser" onclick="resetPassword()">Forgot
+												Password</button></samll>
+									</div>
+
+								</div>
+								<div class="col-sm-12 loginwithgoogle">
+									<button class=" nkgnkjnk" onclick="signIn()">Sign
+										In
+									</button>
+									<!-- <input type="submit" value="Submit"> -->
+								</div>
+								<!-- <br><br> -->
+								<div class="col-sm-12 loginwithgoogle">
+									<button class=" nkgnkjnk1" onclick="ggolesignup()">Sign Up with
+										Google
+									</button>
+								</div>
+							</div>
+						</div>
+						</form>
+
+						<br>
+						<br>
+						<br>
+					</div>
+				</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			</div>
+		</div>
+	</div>
+	<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
+		<div class="carousel-indicators">
+			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators"
+				type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1"
+				data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3"
+				data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img alt="..." class="d-block w-100" src="images/aquaa-1.jpg">
+				<div class="carousel-caption">
+					<h1 class="animated bounceInRight" style="animation-delay: 1s">Find Out next Tour</h1>
+					<p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 1.5s">Where would you
+						like to go?</p>
+					<p class="animated bounceInRight buttonforconatct" style="animation-delay: 2s"><a
+							href="other/feedback.html">Contact us</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img alt="..." class="d-block w-100" src="images/karnala-1.jpg">
+				<div class="carousel-caption">
+					<h1 class="animated bounceInRight" style="animation-delay: 1s">Welcome To KonkanSpace</h1>
+					<p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 1.5s">Where would you
+						like to go?</p>
+					<p class="animated bounceInRight buttonforconatct" style="animation-delay: 2s"><a
+							href="other/feedback.html">Contact us</a>
+					</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img alt="..." class="d-block w-100" src="images/Tarkarli-7.jpg">
+				<div class="carousel-caption">
+					<h1 class="animated bounceInRight" style="animation-delay: 1s">Konkan Tour And Travel</h1>
+					<p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 1.5s">Where would you
+						like to go?</p>
+					<p class="animated bounceInRight buttonforconatct" style="animation-delay: 2s"><a
+							href="other/feedback.html">Contact Us</a>
+					</p>
+				</div>
+			</div>
+		</div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators"
+			type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span
+				class="visually-hidden">Previous</span></button> <button class="carousel-control-next"
+			data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true"
+				class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
+	</div>
+
+	<div class="heading" id="top destination" style="background:url(images/header-bg-2.png) no-repeat">
+		<h1>TOP DESTINATIONS</h1>
+	</div>
+	<!-- packages section starts  -->
+
+
+	<section class="packages">
+		<!-- <h1 class="heading-title">TOP DESTINATION</h1> -->
+
+		<div class="box-container">
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-1.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Marleshwar Temple </h3>
+					<p>Situated at Sahyadri Mount-line,near the Maral Gaon, 20km from devrukh city , Ratnagiri District
+					</p>
+					<a href="Temple/Marleshwar Temple.html" class="btn">book now</a>
+				</div>
+			</div>
+
+
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-3.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Ksb Waterfall</h3>
+					<p>Near the Ganptipule,Ratnagiri</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="img/sunset-at-mandavi.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Mandvi Beach Ratnagiri</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto alias a officia!</p>
+					<a href="beach/Mandavi Beach.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-5.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>Mahimatgad, Sangameshwar, Ratnagiri</h3>
+					<p>Mahimatgad is a hill fort situated in the Sangameshwar taluka of Ratnagiri district. It takes 2.5
+						to 3 hours to reach Mahimatgad from Nigudwadi and Kundi villages.
+
+					</p>
+					<a href="Fort/Mahipatgad.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-6.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<!-- <div class="shomorw"> -->
+			<div class="box">
+				<div class="image">
+					<img src="images/img-7.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-8.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-9.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-10.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-11.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-12.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="book.php" class="btn">book now</a>
+				</div>
+			</div>
+			<!-- </div> -->
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-7.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-8.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-9.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<!-- </div> -->
+			<!-- <div class="shownext"> -->
+			<div class="box">
+				<div class="image">
+					<img src="images/img-10.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-11.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="image">
+					<img src="images/img-12.jpg" alt="">
+				</div>
+				<div class="content">
+					<h3>adventure & tour</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+					<a href="Destinations/marleshwar.html" class="btn">book now</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="load-more"><span class="btn">load more</span></div>
+		<!-- <button class=" btn Load-more">Load More</button> -->
+
+	</section>
+
+	<section class="review">
+
+	</section>
+	<section class="footer">
+
+		<div class="box-container">
+
+			<div class="box">
+				<h3>quick links</h3>
+				<a href="Dashboard.html"> <i class="fas fa-angle-right"></i> home</a>
+				<a href="other/about.html"> <i class="fas fa-angle-right"></i> about</a>
+				<a href="top destination"> <i class="fas fa-angle-right"></i> Top destination</a>
+				<!-- <a href="Services"> <i class="fas fa-angle-right"></i> services</a> -->
+			</div>
+
+			<div class="box">
+				<h3>extra links</h3>
+				<a href="other/feedback.html"> <i class="fas fa-angle-right"></i> feedback</a>
+				<!-- <a href="#"> <i class="fas fa-angle-right"></i> about us</a> -->
+				<a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+				<a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+			</div>
+
+			<div class="box">
+				<h3>contact info</h3>
+				<a href="tel:8087658020"> <i class="fas fa-phone"></i>8087658020 </a>
+				<a href="tel:8149963440"> <i class="fas fa-phone"></i> 8149963440 </a>
+				<a href="mailto:valapkar.ajay@rmcet.com"> <i class="fas fa-envelope"></i> valapkar.ajay@rmcet.com </a>
+				<!-- <a href=""> <i class="fas fa-map"></i> RMCET,Ambav Devrukh-415804 </a> -->
+			</div>
+
+			<div class="box">
+				<h3>follow us</h3>
+				<a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+				<a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+				<a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+			</div>
+
+		</div>
+
+		<div class="credit"> created by <span>Konkan Tours & Travel</span> | all rights reserved! </div>
+
+	</section>
+	<script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
+		// https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js
+		import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, getRedirectResult, signInWithPopup, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+		const firebaseConfig = {
+			apiKey: "AIzaSyDub9XIDp3h2vjxhuyioITFg-YMDQO8R_s",
+			authDomain: "konkanferi.firebaseapp.com",
+			databaseURL: "https://konkanferi-default-rtdb.firebaseio.com",
+			projectId: "konkanferi",
+			storageBucket: "konkanferi.appspot.com",
+			messagingSenderId: "464491932386",
+			appId: "1:464491932386:web:0936af03f77e0f44c00cbb",
+			measurementId: "G-DB71KQCYML"
+		};
+
+
+		firebase.initializeApp(firebaseConfig)
+		var db = firebase.firestore();
+		const app = initializeApp(firebaseConfig);
+		const auth = getAuth(app);
+	</script>
+	<script>
+		style = 'font-size:36px'
+
+		const loginPopup = document.querySelector(".login-popup");
+		const close = document.querySelector(".close");
+
+
+		window.addEventListener("load", function () {
+
+			showPopup();
+			// setTimeout(function(){
+			//   loginPopup.classList.add("show");
+			// },5000)
+
+		})
+
+		function showPopup() {
+			const timeLimit = 5 // seconds;
+			let i = 0;
+			const timer = setInterval(function () {
+				i++;
+				if (i == timeLimit) {
+					clearInterval(timer);
+					loginPopup.classList.add("show");
+				}
+				// console.log(i)
+			}, 100);
+		}
+
+
+		close.addEventListener("click", function () {
+			loginPopup.classList.remove("show");
+		})
+		function signup() {
+
+			document.getElementById("signup").style.display = "block"
+			document.getElementById("signin").style.display = "none"
+		}
+		function signin() {
+			document.getElementById("signin").style.display = "block"
+			document.getElementById("signup").style.display = "none"
+		}
+
+		//
+
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
+	<!-- Import Firebase Authentication-->
+	<script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js">
+
+	</script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+	<!-- custom js file link  -->
+	<!-- <script src="js/script.js"></script> -->
+	<script src="js/signinfor.js"></script>
+	<script src="js/signin.js"></script>
+	<script src="js/index.js 	"></script>
+	<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
